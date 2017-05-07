@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import About from './About';
+import Users from './Users';
 import '../styles/App.css';
-
-import About from './About.js'
 
 class App extends Component {
   render() {
@@ -14,6 +13,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <About aboutData='Introduction about yourself on the profile' />
+        <Users />
       </div>
     );
   }

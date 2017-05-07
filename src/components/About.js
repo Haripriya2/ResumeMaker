@@ -19,4 +19,4 @@ About.propTypes = {
   aboutData: PropTypes.string.isRequired
 };
 
-export default About
+export default About;
