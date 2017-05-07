@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import '../styles/Template-1.css';
 
 class Template1 extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div id="template1">
@@ -19,14 +15,14 @@ class Template1 extends Component {
  		</div>
  		<div>
  			<h3>Local Address</h3>
- 			335 Name Street, Unit #<br>
- 			Town, Province, N2H 3Y6<br>
+ 			335 Name Street, Unit #<br/>
+ 			Town, Province, N2H 3Y6<br/>
  			1-519-500-1111
  		</div>
  		<div>
  			<h3>Permanent Address</h3>
- 			62 6th Avenue <br>
- 			Town, Ontario, N4N 2V6<br>
+ 			62 6th Avenue <br/>
+ 			Town, Ontario, N4N 2V6<br/>
  			1-519-500-1111
  		</div>
  	</div>
@@ -95,8 +91,5 @@ class Template1 extends Component {
   }
 }
 
-/*About.propTypes = {
-  aboutData: PropTypes.string.isRequired
-};*/
 
 export default Template1

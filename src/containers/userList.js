@@ -1,19 +1,33 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {selectUser} from '../actions';
 
-class userList extends Component {
-    render() {
-        return (
-            <div>
-            <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            </ul>
-            </div>
-        );
-    }
+class ListOfUsers extends Component {
+  renderList(){
+    return this.props.user.map((user) => {
+      return(
+        <li key={user.id} onClick={() => this.props.selectUser(user)}>{user.first} {user.last}</li>
+      );
+    });
+  }
+  render() {
+    return (
+     <ul>
+     {this.renderList()}
+     </ul>
+    );
+  }
 }
 
-export default userList;
+const mapStateToProps = (state) => {
+  return {
+    user: state.users
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({selectUser: selectUser}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListOfUsers);
