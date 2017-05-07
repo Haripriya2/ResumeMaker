@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {Navbar, Nav, NavItem, Glyphicon} from 'react-bootstrap';
 import {Link} from 'react-router';
+
+import Login from './Login';
 
 class Navigation extends Component {
   render() {
@@ -20,8 +21,7 @@ class Navigation extends Component {
         <NavItem eventKey={3}><Link to="/users">Users</Link></NavItem>
       </Nav>
       <Nav pullRight>
-        <NavItem eventKey={1} href="#">Search</NavItem>
-        <NavItem eventKey={2} href="#">Login/Sign up</NavItem>
+        <NavItem eventKey={1}><Login/></NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
