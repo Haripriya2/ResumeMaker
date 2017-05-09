@@ -31,6 +31,10 @@
   margin-bottom: 30px;
 }
 
+.editor {
+  height: 500px;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }

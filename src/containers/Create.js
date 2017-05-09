@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import {Grid, Col, Nav, NavItem, Panel} from 'react-bootstrap';
+import {Grid, Col, Nav, NavItem, Panel, Button} from 'react-bootstrap';
 import RichTextEditor from 'react-rte';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
-import Basic from './FormElements/Basic';
+import Basic from '../components/FormElements/Basic';
+import Education from '../components/FormElements/Education';
+import Qualifications from '../components/FormElements/Qualifications';
+import Reference from '../components/FormElements/Reference';
+import {formSubmission} from '../actions';
 
 class Create extends Component {
   constructor(props) {
@@ -17,7 +23,8 @@ class Create extends Component {
         localAddr1: '',
         localAddr2: '',
         localAddrPin: '',
-        qualification : RichTextEditor.createEmptyValue()
+        qualification : RichTextEditor.createEmptyValue(),
+        reference: RichTextEditor.createEmptyValue()
     }
 
     this.handleSelect = this.handleSelect.bind(this)
@@ -36,6 +43,9 @@ class Create extends Component {
   renderFormElement(){
     switch(this.state.selected){
       case 1: return <Basic data={this.state} change={this.handleChange}/>
+      case 2: return <Education data={this.state} change={this.handleChange}/>
+      case 4: return <Qualifications data={this.state} change={this.handleChange}/>
+      case 5: return <Reference data={this.state} change={this.handleChange}/>
       default: return null
     }
   }
@@ -59,11 +69,15 @@ class Create extends Component {
      <Panel>
      {form}
      </Panel>
+     <Button onClick={() => this.props.formSubmission(this.state)}> Preview </Button>
      </Col>
      </Grid>   
     );
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({formSubmission: formSubmission}, dispatch);
+}
 
-export default Create;
+export default connect(mapDispatchToProps)(Create);

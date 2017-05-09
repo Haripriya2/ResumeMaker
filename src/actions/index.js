@@ -5,3 +5,11 @@ export const selectUser = (user) =>{
         payload: user
     }
 }
+
+export const formSubmission = (formEntry) =>{
+    console.log('You have submitted form for : ', formEntry.first);
+    return{
+        type: "RESUME_CREATED",
+        payload: formEntry
+    }
+}

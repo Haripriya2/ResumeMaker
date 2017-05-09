@@ -8,7 +8,7 @@ import {Router, Route, hashHistory} from 'react-router';
 import App from './components/App';
 import Users from './components/Users';
 import About from './components/About';
-import Create from './components/Create';
+import Create from './containers/Create';
 import allReducers from './Reducers';
 import './styles/index.css';
 
