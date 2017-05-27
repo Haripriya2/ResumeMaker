@@ -8,6 +8,7 @@ export const selectUser = (user) =>{
 
 export const formSubmission = (formEntry) =>{
     console.log('You have submitted form for : ', formEntry.first);
+    console.log(formEntry)
     return{
         type: "RESUME_CREATED",
         payload: formEntry

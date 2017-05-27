@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import {Grid, Col, Nav, NavItem, Panel, Button} from 'react-bootstrap';
+import {Grid, Col, Nav, NavItem, Panel, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
 import RichTextEditor from 'react-rte';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 import Basic from '../components/FormElements/Basic';
 import Education from '../components/FormElements/Education';
+import Work from '../components/FormElements/WorkExperience';
 import Qualifications from '../components/FormElements/Qualifications';
 import Reference from '../components/FormElements/Reference';
+
 import {formSubmission} from '../actions';
 
 class Create extends Component {
@@ -24,7 +26,15 @@ class Create extends Component {
         localAddr2: '',
         localAddrPin: '',
         qualification : RichTextEditor.createEmptyValue(),
-        reference: RichTextEditor.createEmptyValue()
+        reference: RichTextEditor.createEmptyValue(),
+        institution: '',
+        degree: '',
+        start: '',
+        end: '',
+        company: '',
+        jobTitle: '',
+        jobStart: '',
+        jobEnd: ''
     }
 
     this.handleSelect = this.handleSelect.bind(this)
@@ -44,6 +54,7 @@ class Create extends Component {
     switch(this.state.selected){
       case 1: return <Basic data={this.state} change={this.handleChange}/>
       case 2: return <Education data={this.state} change={this.handleChange}/>
+      case 3: return <Work data={this.state} change={this.handleChange} />
       case 4: return <Qualifications data={this.state} change={this.handleChange}/>
       case 5: return <Reference data={this.state} change={this.handleChange}/>
       default: return null

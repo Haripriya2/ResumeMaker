@@ -7,10 +7,10 @@ import Login from './Login';
 class Navigation extends Component {
   render() {
     return (
-  <Navbar inverse collapseOnSelect>
+  <Navbar inverse collapseOnSelect stacked>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#"><Glyphicon glyph="home" /> Home</a>
+        <Link to="/home"><Glyphicon glyph="home" /> Home</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
