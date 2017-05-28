@@ -24,7 +24,7 @@ class Work extends Component {
            <FormGroup controlId="JobTitle">
               <Col componentClass={ControlLabel} sm={3}>Job title</Col>
               <Col sm={9}><FormControl type="text" placeholder="Enter your designation" inputRef={ref => { this.inputJobTitle = ref; }}
-               onChange={(value, field) => this.props.change(this.inputJobTitle.value,'degree')} value={work.jobTitle}/></Col>
+               onChange={(value, field) => this.props.change(this.inputJobTitle.value,'jobTitle')} value={work.jobTitle}/></Col>
            </FormGroup>
 
             <FormGroup controlId="startDate">

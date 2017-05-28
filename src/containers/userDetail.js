@@ -9,7 +9,7 @@ class Details extends Component {
       );
     }
     return (
-        <div>
+        <div className="userDetails">
         <h3>{this.props.user.first} {this.props.user.last}</h3>
         <h4> Age: {this.props.user.age} </h4>
         <h5> Email: {this.props.user.email}</h5>

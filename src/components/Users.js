@@ -7,11 +7,15 @@ class Users extends Component {
   render() {
     return (
       <Panel>
-        <h2>Users list</h2>
-        <ListOfUsers />
-        <hr/>
+      <div className="row">
+      <div className="col-md-4">
+        <h2>Users list</h2><ListOfUsers />
+       </div> 
+       <div className="col-md-4">
         <h2>User Details</h2>
         <Details />
+        </div>
+        </div>
       </Panel>
     );
   }

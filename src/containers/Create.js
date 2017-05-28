@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Grid, Col, Nav, NavItem, Panel, Button, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Grid, Col, Nav, NavItem, Panel, Button} from 'react-bootstrap';
 import RichTextEditor from 'react-rte';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -21,7 +21,8 @@ class Create extends Component {
         first: '',
         last: '',
         email: '',
-        contactNo: '',
+        mobileNo: '',
+        workNo: '',
         localAddr1: '',
         localAddr2: '',
         localAddrPin: '',
@@ -40,6 +41,7 @@ class Create extends Component {
     this.handleSelect = this.handleSelect.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.renderFormElement = this.renderFormElement.bind(this)
+    this.handlePreview = this.handlePreview.bind(this)
   }
 
   handleSelect(key){
@@ -48,6 +50,14 @@ class Create extends Component {
 
   handleChange(value, field){
     this.setState({[field]: value})
+  }
+
+  handlePreview(){
+    const qualifyText = this.state.qualification
+    const refText = this.state.reference
+    this.setState({qualification: qualifyText.toString('html'),
+                   reference: refText.toString('html')})
+    this.props.formSubmission(this.state)
   }
 
   renderFormElement(){
@@ -84,7 +94,8 @@ class Create extends Component {
      </Panel>
      <br/>
      <div className="card1">
-     <Button onClick={() => this.props.formSubmission(this.state)}> Preview </Button>
+     <Button bsStyle="primary" onClick={() => this.handlePreview()}> Preview </Button>&nbsp;
+     <Button bsStyle="primary" > Save </Button>
      </div>
      </Col>
      </Grid>   
