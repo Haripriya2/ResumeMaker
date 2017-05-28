@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Modal, Button, Form, FormGroup, Col, FormControl, Checkbox, ControlLabel} from 'react-bootstrap';
+import {Modal, Button, Form, FormGroup, Col, FormControl, Checkbox, ControlLabel, Label} from 'react-bootstrap';
 
 class Login extends Component {
     constructor(props){
@@ -23,6 +23,7 @@ class Login extends Component {
 
 renderSignupPage() {
     return(
+  <div className="card1">
    <Form horizontal>
     <FormGroup controlId="formHorizontalEmail">
       <Col componentClass={ControlLabel} sm={2}>Email</Col>
@@ -47,11 +48,13 @@ renderSignupPage() {
       <Col smOffset={10} sm={10}><Button bsStyle="primary" type="submit">Signup</Button></Col>
     </FormGroup>
   </Form>
+  </div>
     );
 }
 
 renderLoginPage() {
     return(
+      <div className="card1">
    <Form horizontal>
     <FormGroup controlId="formHorizontalEmail">
       <Col componentClass={ControlLabel} sm={2}>Email</Col>
@@ -67,6 +70,7 @@ renderLoginPage() {
       <Col smOffset={10} sm={10}><Button bsStyle="primary" >Login</Button></Col>
     </FormGroup>
   </Form>
+  </div>
     );
 }
 
@@ -75,17 +79,18 @@ renderLoginPage() {
       const login = this.renderLoginPage();
     return (
     <div>
-    <Button bsSize="small" onClick={this.open}> Login/ Signup </Button>
+    <Button bsSize="small" bsStyle="warning" onClick={this.open}> Login/ Signup </Button>
       <Modal show={this.state.showPage} onHide={this.close}>
       <Modal.Header closeButton>
-      Sign up / Login Page
+       <h3><Label bsStyle="primary">Sign up / Login Page</Label></h3>
       </Modal.Header>
       <Modal.Body>
       {signup}
+      <br/>
       {login}
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={this.close}>Close</Button>
+        <Button onClick={this.close} bsStyle="primary">Close</Button>
       </Modal.Footer>
       </Modal>
     </div>
