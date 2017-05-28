@@ -34,8 +34,8 @@ class Home extends Component {
             </Carousel>
             </Col>
             <Col md={4}>
-             <div className="card"> <p> Description </p> 
-             <div className="container"><p>blah blah</p></div>
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
              </div>
             </Col>
             </Row>
