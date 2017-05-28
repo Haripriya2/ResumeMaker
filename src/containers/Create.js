@@ -67,6 +67,7 @@ class Create extends Component {
     return (
      <Grid>
      <Col md={4}>
+     <div className="card1">
      <Nav bsStyle="pills" stacked activeKey={this.state.selected} onSelect={this.handleSelect}>
      <NavItem eventKey={1} >Basic data</NavItem>
      <NavItem eventKey={2} >Education</NavItem>
@@ -74,13 +75,17 @@ class Create extends Component {
      <NavItem eventKey={4} >Qualification</NavItem>
      <NavItem eventKey={5} >Reference</NavItem>
      </Nav>
+     </div>
      </Col>
      
      <Col md={8}>
-     <Panel>
+     <Panel bsClass="formElement">
      {form}
      </Panel>
+     <br/>
+     <div className="card1">
      <Button onClick={() => this.props.formSubmission(this.state)}> Preview </Button>
+     </div>
      </Col>
      </Grid>   
     );

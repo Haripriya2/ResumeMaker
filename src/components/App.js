@@ -8,8 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Build your Resume</h2>
+          <h2><img src={logo} className="App-logo" alt="logo" />Build your Resume</h2>
         </div>
         <Navigation />
         <div className="App-body"> 
