@@ -10,6 +10,8 @@ import Work from '../components/FormElements/WorkExperience';
 import Qualifications from '../components/FormElements/Qualifications';
 import Reference from '../components/FormElements/Reference';
 
+import Preview from './previewResume';
+
 import {formSubmission} from '../actions';
 
 class Create extends Component {
@@ -93,10 +95,17 @@ class Create extends Component {
      {form}
      </Panel>
      <br/>
+     <Col md={6}>
      <div className="card1">
-     <Button bsStyle="primary" onClick={() => this.handlePreview()}> Preview </Button>&nbsp;
-     <Button bsStyle="primary" > Save </Button>
+     <Button bsStyle="primary" bsSize="large" onClick={() => this.handlePreview()}> Save </Button>
      </div>
+     </Col>
+     <Col md={6}>
+     <div className="card1">
+     <Preview />
+     </div>
+     </Col>
+     
      </Col>
      </Grid>   
     );
@@ -107,4 +116,4 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({formSubmission: formSubmission}, dispatch);
 }
 
-export default connect(mapDispatchToProps)(Create);
+export default connect(null,mapDispatchToProps)(Create);
