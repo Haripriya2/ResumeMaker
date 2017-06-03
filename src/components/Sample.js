@@ -21,16 +21,16 @@ class Sample extends Component {
       this.setState({selected: key});
   }
 
-  renderView(){
+ /* renderView(){
       switch(this.state.selected) {
           case 1: return <Template1 />
           case 2: return <Template2 />
           default: return <About aboutData="This is sample page" />
       }
   }
-
+*/
   render() {
-      const sample = this.renderView();
+      //const sample = this.renderView();
     return (
         <Panel>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -48,10 +48,10 @@ class Sample extends Component {
       <Col sm={8}>
         <Tab.Content animation>
           <Tab.Pane eventKey={1}>
-            {sample}
+            
           </Tab.Pane>
           <Tab.Pane eventKey={2}>
-            {sample}
+            
           </Tab.Pane>
         </Tab.Content>
       </Col>

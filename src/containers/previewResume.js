@@ -24,7 +24,8 @@ class Preview extends Component {
  }
 
   render() {
-      const preview =this.props.resume
+      const preview = this.props.resume
+      console.log('Rendered:', preview)
        return(
            <div>
 
