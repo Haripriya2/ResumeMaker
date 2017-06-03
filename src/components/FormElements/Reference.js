@@ -1,16 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import RichTextEditor from 'react-rte';
+import {Label} from 'react-bootstrap';
 
 class Reference extends Component {
     render() {
         const reference = this.props.data
         return(
-            <div><h4> References </h4>
-            <RichTextEditor
-        value={reference.reference}
-        onChange={(value,field) => this.props.change(value,'reference')}
-      />
-      </div>
+            <div><h3><Label bsStyle="warning"> References</Label></h3><br/>
+            <RichTextEditor value={reference.reference} onChange={(value,field) => this.props.change(value,'reference')} />
+            </div>
         );
     }
 }

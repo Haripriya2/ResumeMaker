@@ -16,7 +16,6 @@ class Preview extends Component {
  }
 
  open(){
-     console.log(this.props.resume)
      this.setState({showModal: true})
  }
 
@@ -38,13 +37,19 @@ class Preview extends Component {
           </Modal.Header>
           <Modal.Body>
           <h3><Glyphicon glyph="user" />About</h3>
-            <p> Name: <span> {this.props.resume? this.props.resume.first: ''} &nbsp; {this.props.resume? this.props.resume.last: ''} </span> </p>
+            <p> Name: <span> {preview? preview.first: ''} &nbsp; {preview? preview.last: ''} </span> </p>
             <p>Email: {preview? preview.email: ''}</p> 
             <p>Contact:<br/> Personal: {preview? preview.mobileNo: ''} Work: {preview? preview.workNo: ''}</p>
+            <p> Address: {preview? preview.localAddr1 : ''} <br/> {preview? preview.localAddr2 : ''}</p>
             <hr />
             <h3><Glyphicon glyph="education" />Education</h3>
-            <p>{this.props.resume ? this.props.resume.institution : ''}</p>
+            <p>Name of institution: {preview ? preview.institution : ''}</p>
+            <p>Name of degree: {preview ? preview.degree : ''}</p>
+            <p> From {preview? preview.start : ''} to {preview? preview.end : ''}</p>
             <h3><Glyphicon glyph="folder-close" />Experience</h3>
+            <p>Name of Company: {preview ? preview.company : ''}</p>
+            <p>Job title: {preview ? preview : ''}</p>
+            <p> From {preview? preview.jobStart : ''} to {preview? preview.jobEnd : ''}</p>
             <h3><Glyphicon glyph="wrench" />Skill set</h3>
             <h3><Glyphicon glyph="envelope" />Reference</h3>
             </Modal.Body>

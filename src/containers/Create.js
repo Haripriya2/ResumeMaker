@@ -55,8 +55,10 @@ class Create extends Component {
   }
 
   handlePreview(){
-    const qualifyText = this.state.qualification
-    const refText = this.state.reference
+    //const qualifyText = this.state.qualification.toString('html')
+    //const refText = this.state.reference.toString('html')
+    //console.log(qualifyText)
+    //this.setState({qualification: qualifyText, reference: refText})
     this.props.formSubmission(this.state)
   }
 

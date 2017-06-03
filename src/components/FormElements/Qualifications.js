@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import RichTextEditor from 'react-rte';
+import {Label} from 'react-bootstrap';
 
 class Qualifications extends Component {
     render() {
         const qualifications = this.props.data
         return(
             <div>
-            <h4> Qualifications </h4>
+            <h3><Label bsStyle="warning"> Skills</Label></h3><br/>
             <RichTextEditor
         value={qualifications.qualification}
         onChange={(value,field) => this.props.change(value,'qualification')}

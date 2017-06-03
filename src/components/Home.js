@@ -6,7 +6,24 @@ class Home extends Component {
         return(
             <Grid>
             <Row>
-            <Col md={8}>
+            <Col md={4}>
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            <br/>
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            <br />
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+           <br />
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            </Col>
+            <Col md={4}>
             <Carousel>
                 <Carousel.Item><img width={900} height={200} alt="900x200" 
                 src="https://marketplace.canva.com/MACE_bCG9mM/1/0/thumbnail_large/canva-yellow-creative-director-photo-resume-MACE_bCG9mM.jpg"/>
@@ -17,7 +34,7 @@ class Home extends Component {
                 </Carousel.Item>
     
                 <Carousel.Item><img width={900} height={200} alt="900x200" 
-                src="https://s-media-cache-ak0.pinimg.com/originals/ea/4b/47/ea4b47195a3a3b12ab20af96075dd362.jpg"/>
+                src="https://marketplace.canva.com/MAB5V6_Wn9M/1/0/thumbnail_large/canva-green-elementary-educator-r%C3%A9sum%C3%A9-MAB5V6_Wn9M.jpg"/>
                 <Carousel.Caption>
                 <h3>Template 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -25,7 +42,7 @@ class Home extends Component {
                 </Carousel.Item>
     
                 <Carousel.Item><img width={900} height={200} alt="900x200" 
-                src="https://static.wixstatic.com/media/6d2987_a0efd8d57ae642ee9d43d1ca2d108e7d.png_srz_202_260_85_22_0.50_1.20_0.00_png_srz"/>
+                src="https://marketplace.canva.com/MAB5aJa-4vM/1/0/thumbnail_large/canva-professional-store-manager-resume-MAB5aJa-4vM.jpg"/>
                 <Carousel.Caption>
                 <h3>Template 3</h3>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -34,6 +51,18 @@ class Home extends Component {
             </Carousel>
             </Col>
             <Col md={4}>
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            <br/>
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            <br />
+             <div className="card1"> <p> Description </p> 
+             <p>blah blah</p>
+             </div>
+            <br />
              <div className="card1"> <p> Description </p> 
              <p>blah blah</p>
              </div>
