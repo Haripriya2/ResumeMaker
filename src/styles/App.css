@@ -8,14 +8,14 @@
 }
 
 .App-header {
-  background-color: orange;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VBwst5gbz4KQxmBkFbgXShpNrjP8sJ6-tE8oqql-H1IJfdJw2A");
   height: 100px;
   padding: 5px;
-  color: #337ab7;
+  color:whitesmoke;
   font-family: 'TimesNewRoman';
-  font-size: large;
+  font-size: x-large;
   font-style: italic;
-  font-weight: 800;
+  font-weight: 1000;
 }
 
 .App-intro {
