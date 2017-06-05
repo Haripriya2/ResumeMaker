@@ -6,6 +6,7 @@ export default function () {
     age: 28,
     email: "renudhingra@gmail.com",
     dob: "03/05/1993",
+    phone: 9844075630,
     localAddress: {
         a1: "335 Name Street, Unit #",
         a2: "Town, Province, N2H 3Y6",
@@ -28,7 +29,9 @@ export default function () {
            country: "India",
            jobTitle: "Analyst",
            start: "04/01/2009",
-           end: "09/09/2011"
+           end: "09/09/2011",
+           description: "Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum"
+                         +"Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum"
        },
        work2: {
            company: "Company B",
@@ -36,8 +39,15 @@ export default function () {
            country: "India",
            jobTitle: "Analyst",
            start: "16/09/2011",
-           end: "present"
+           end: "present",  
+           description: "Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum"
+                         +"Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum, Lorum Ipsum Lorum Ipsum"
        }
-   }
+   },
+  References: {
+      reference1: 'Dr. ABC, abc@gmail.com',
+      reference2: 'Dr. AGC, gac@gmail.com',
+      reference3: 'Dr. DSC, dsc@gmail.com',
+  }
   }
 }

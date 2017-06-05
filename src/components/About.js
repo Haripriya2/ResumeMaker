@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-import {Tabs, Tab} from 'react-bootstrap';
+import {Tabs, Tab, Grid, Row, Col, Image} from 'react-bootstrap';
 
 class About extends Component {
   constructor(props){
@@ -13,25 +13,110 @@ class About extends Component {
     this.sampleThird = this.sampleThird.bind(this)
   }
 
-  sampleFirst(){
+  sampleFirst(sample){
     return (
-      <div>
-      <h3>Sample1</h3>
+      <Grid>
+      <div id="template1">
+      <Row>
+      <h1>Sample1</h1>
+      </Row>
+      <header>
+      <Row>
+      
+         <Col md={8}>
+              <h1 >{sample.first} {sample.last}</h1>
+              <h2 >{sample.WorkExperience.work2.jobTitle}</h2>
+         </Col>
+         <Col md={4}><Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4_g0bjKtkhbry8-W81WGWTxZhBjNfeLVcqc028pTRdSAr-ndKw" circle /></Col>
+      
+      </Row>
+      </header>
+      <Row>
+      <Col md={4}><h2>About</h2>
+      <p> Age : {sample.age} </p>
+      <p> DOB : {sample.dob} </p>
+      <p> Address : {sample.localAddress.a1}, {sample.localAddress.a2}, PIN: {sample.localAddress.pin} </p>      
+      </Col>
+      <Col md={4}><h2>Qualification</h2>
+      <ul>
+      <li>{sample.qualifications.q1}</li>
+      <li>{sample.qualifications.q2}</li>
+      <li>{sample.qualifications.q3}</li>
+      </ul>
+      </Col>
+      <Col md={4}><h2>Contact Info</h2>
+      <p>Phone : {sample.phone}</p>
+      <p>Email : {sample.email}</p>
+      </Col>
+      </Row>
+
+      <Row>
+      <h2>Career Progression & Accomplishments</h2>
+      <Col md={6}>
+      <strong><h3>{sample.WorkExperience.work1.company}, {sample.WorkExperience.work1.city}</h3></strong>
+      <h4>{sample.WorkExperience.work1.start} - {sample.WorkExperience.work1.end}</h4>
+      <p>{sample.WorkExperience.work1.description}</p>
+      </Col>
+      <Col md={6}>
+      <strong><h3>{sample.WorkExperience.work2.company}, {sample.WorkExperience.work2.city}</h3></strong>
+      <h4>{sample.WorkExperience.work2.start} - {sample.WorkExperience.work2.end}</h4>
+      <p>{sample.WorkExperience.work2.description}</p>
+      </Col>
+      </Row>
+      <Row>
+      <strong><h3>References</h3></strong>
+      <ul>
+      <li>{sample.References.reference1}</li>
+      <li>{sample.References.reference2}</li>
+      <li>{sample.References.reference3}</li>
+      </ul>
+      </Row>
+      </div>
+      </Grid>
+    );
+  }
+
+  sampleSecond(sample){
+    return (
+      <Grid>
+      <div id="template2">
+      
+      <Row><h3>Sample2</h3></Row>
+      
+      <header><Row>
+      <h1 >{sample.first} {sample.last}</h1>
+      <h2 >{sample.WorkExperience.work2.jobTitle}</h2>
+      </Row></header>
+
+      <Row>
+      <Col md={5}>
+      <Row><Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4_g0bjKtkhbry8-W81WGWTxZhBjNfeLVcqc028pTRdSAr-ndKw" circle /></Row>
+      <Row><h3>Profile</h3><p>A small description about yourself in terms of your line or business/ occupation</p></Row>
+      <Row><h3>Contact info</h3><p>Phone : {sample.phone}</p><p>Email : {sample.email}</p></Row>
+      </Col>
+      <Col md={7}>
+      <Row><h3>Areas of Expertise & Skills</h3></Row>
+      <Row><h3>Experience</h3></Row>
+      <Row><h3>Education</h3></Row>
+      <Row><h3>Reference</h3></Row>
+      </Col>
+      </Row>
+      
+      </div>
+      </Grid>
+    );
+  }
+
+  sampleThird(){
+    return (
+      <div id="template3">
+      <h3>Sample3</h3>
       </div>
     );
   }
 
-  sampleSecond(){
-    return null;
-  }
-
-  sampleThird(){
-    return null;
-  }
   render() {
-    console.log('Sample: ', this.props.sample)
     const sample = this.props.sample
-    console.log('Name: ', sample.first)
     return (
       <div>
       <section className="about">
@@ -40,9 +125,9 @@ class About extends Component {
       </section>
       <div className="card1">
       <Tabs bsStyle="pills" defaultActiveKey={1} animation={false} id="noanim-tab-example">
-       <Tab eventKey={1} title="Sample 1">{this.sampleFirst()}</Tab>
-       <Tab eventKey={2} title="Sample 2">Sample 2</Tab>
-       <Tab eventKey={3} title="Sample 3">Sample 3</Tab>
+       <Tab eventKey={1} title="Sample 1">{this.sampleFirst(sample)}</Tab>
+       <Tab eventKey={2} title="Sample 2">{this.sampleSecond(sample)}</Tab>
+       <Tab eventKey={3} title="Sample 3">{this.sampleThird()}</Tab>
      </Tabs>
      </div>
       </div>
