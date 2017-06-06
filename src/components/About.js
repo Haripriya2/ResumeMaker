@@ -84,16 +84,19 @@ class About extends Component {
       <Row><h3>Sample2</h3></Row>
       
       <header><Row>
-      <h1 >{sample.first} {sample.last}</h1>
+      <div className="box"><h1 >{sample.first} {sample.last}</h1></div>
       <h2 >{sample.WorkExperience.work2.jobTitle}</h2>
       </Row></header>
-
+      <div className="line"><br/></div>
       <Row>
       <Col md={5}>
-      <Row><Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4_g0bjKtkhbry8-W81WGWTxZhBjNfeLVcqc028pTRdSAr-ndKw" circle /></Row>
+      <div className="sidebar">
+      <Row>
       
-      <Row><h3>Profile</h3><p>A small description about yourself in terms of your line or business/ occupation</p></Row>
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4_g0bjKtkhbry8-W81WGWTxZhBjNfeLVcqc028pTRdSAr-ndKw" circle />
+      <h3>Profile</h3><p>A small description about yourself in terms of your line or business/ occupation</p>
       
+      </Row>
       <Row><h3>Contact info</h3>
       <p>{sample.localAddress.a1}, {sample.localAddress.a2}, PIN: {sample.localAddress.pin}</p>
       <p><Label bsStyle="warning"><Glyphicon glyph="phone-alt"/></Label> Phone : {sample.phone}</p>
@@ -106,6 +109,7 @@ class About extends Component {
       <p>{sample.References.reference3}</p>
       
       </Row>
+      </div>
       </Col>
 
       <Col md={7}>
@@ -168,19 +172,19 @@ class About extends Component {
       <h3>Sample3</h3>
 
       <header><Row>
-      <h1 >{sample.first} {sample.last}</h1>
+      <h1 ><strong>{sample.first} {sample.last}</strong></h1>
       <h2 >{sample.WorkExperience.work2.jobTitle}</h2>
       </Row></header>
 
       <Row>
       <Col md={4}><div className="side1">
-      <strong><h3>Skills</h3></strong>
+      <h3><strong>Skills</strong></h3>
       <p>Branding</p><p>Print designing</p>
       <p>Web designs</p>
       </div></Col>
       <Col md={8}>
       <div className="side2">
-      <strong><h3><Glyphicon glyph="user" /> Profile</h3></strong>
+      <h3><strong><Glyphicon glyph="user" /> Profile</strong></h3>
       <p>A small description about yourself in terms of your line or business/ occupation</p>
       </div>
       </Col>
@@ -188,7 +192,7 @@ class About extends Component {
 
       <Row>
       <Col md={4}><div className="side1">
-      <strong><h3>Education</h3></strong>
+      <h3><strong>Education</strong></h3>
       <strong><p>{sample.Education.instt1.name}</p></strong>
       <p>{sample.Education.instt1.degree}</p>
       <p>{sample.Education.instt1.start} - {sample.Education.instt1.end}</p>
@@ -199,7 +203,7 @@ class About extends Component {
       </div></Col>
       <Col md={8}>
       <div className="side2">
-      <strong><h3><Glyphicon glyph="briefcase" /> Work Experience</h3></strong>
+      <h3><strong><Glyphicon glyph="briefcase" /> Work Experience</strong></h3>
       <strong><p>{sample.WorkExperience.work1.company}, {sample.WorkExperience.work1.city} | 
       {sample.WorkExperience.work1.start} - {sample.WorkExperience.work1.end}</p></strong>
       <p>{sample.WorkExperience.work1.description}</p>
@@ -213,14 +217,14 @@ class About extends Component {
 
       <Row>
       <Col md={4}><div className="side1">
-      <strong><h3>Contact info</h3></strong>
+      <h3><strong>Contact info</strong></h3>
       <p>{sample.localAddress.a1}, {sample.localAddress.a2}, PIN: {sample.localAddress.pin}</p>
       <p> {sample.phone}</p>
       <p> {sample.email}</p>
       </div></Col>
       <Col md={8}>
       <div className="side2">
-      <strong><h3><Glyphicon glyph="list-alt" /> References</h3></strong>
+      <h3><strong><Glyphicon glyph="list-alt" /> References</strong></h3>
       <p>{sample.References.reference1}</p>
       <p>{sample.References.reference2}</p>
       <p>{sample.References.reference3}</p>
