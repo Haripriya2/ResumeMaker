@@ -103,10 +103,10 @@ a {
 			}
 
 #template1 > header {
-     background-color: palegreen;
+     background-color: darkseagreen;
      font-size: 50px;
      font-weight: bold;
-     padding:1em;
+     padding:0.5em;
 }
 
 #template1 > h1{
@@ -147,10 +147,8 @@ a {
 
  .sidebar {
      background-color: gray;
-     font-size: 70px;
-     font-weight: bold;
-     padding:0.5em;
 }
+
 
 #template3 {
 			background-color:#FFF;
@@ -160,3 +158,30 @@ a {
 			border:2px solid #456;
 			max-width: 50em;
 			}
+
+#template3 > header {
+     background-color: black;
+     color: white;
+     font-size: 70px;
+     font-family: 'Courier New'; 
+     font-weight: bold;
+     text-transform: uppercase;
+     padding:0.5em;
+}
+
+.side1 {
+  background-color: mediumaquamarine;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: 'Times New Roman';
+  padding: 0.5em;
+  height: 100%;
+}
+
+.side2 {
+  text-transform: uppercase;
+  text-align: left;
+  font-family: 'Times New Roman';
+  padding: 0.5em;
+  height: 100%;
+}

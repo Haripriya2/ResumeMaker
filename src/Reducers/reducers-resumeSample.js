@@ -1,10 +1,10 @@
 export default function () {
   return {
     id: 0,
-    first: "Renu",
-    last: "Dhingra",
+    first: "Akasoki",
+    last: "Itazura",
     age: 28,
-    email: "renudhingra@gmail.com",
+    email: "akaitza35@gmail.com",
     dob: "03/05/1993",
     phone: 9844075630,
     localAddress: {
@@ -21,6 +21,20 @@ export default function () {
        q1: "Undergraduate degree",
        q2: "Postgraduate degree",
        q3: "Phd"
+   },
+   Education: {
+       instt1: {
+           name: 'XYZ College of Engg, Mangalore',
+           degree: 'B.tech',
+           start: '12/09/2009',
+           end: '11/09/2013'
+       },
+       instt2: {
+           name: 'ABC P U College, Bangalore',
+           degree: 'PUC II',
+           start: '12/09/2007',
+           end: '11/09/2009'
+       }
    },
    WorkExperience: {
        work1: {
